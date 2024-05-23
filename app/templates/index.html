@@ -18,6 +18,18 @@
             <p>Temperature: {{ weather_data.temperature }} °C</p>
             <p>Description: {{ weather_data.description }}</p>
             <img src="{{ weather_data.icon }}" alt="Weather icon">
+            <h3>5-Day Forecast:</h3>
+            <ul>
+                {% for day in weather_data.forecast %}
+                    <li>
+                        <p>Date: {{ day.date }}</p>
+                        <p>Max Temp: {{ day.max_temp }} °C</p>
+                        <p>Min Temp: {{ day.min_temp }} °C</p>
+                        <p>Description: {{ day.description }}</p>
+                        <img src="{{ day.icon }}" alt="Weather icon">
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     {% elif error %}
         <p>{{ error }}</p>
