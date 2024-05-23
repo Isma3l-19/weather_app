@@ -1,11 +1,82 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-}
-form {
+    font-family: sans-serif; /* Generic sans-serif font */
+    background-color: #eee; /* Light gray background */
+    color: #333; /* Dark gray text */
+    margin: 0; /* Remove default browser margins */
+  }
+  
+  h1 {
+    text-align: center; /* Center heading text */
     margin-bottom: 20px;
-}
-.weather-result {
-    margin-top: 20px;
-}
+    font-size: 2em; /* Increase heading size */
+  }
+  
+  form {
+    display: flex; /* Arrange form elements horizontally */
+    justify-content: center; /* Center form within container */
+    margin-bottom: 30px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space between input and button */
+    flex: 1; /* Allow input to grow and fill available space */
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Indicate clickable button */
+  }
+  
+  .weather-result {
+    background-color: #fff; /* White background for weather info */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 0 auto; /* Center weather info horizontally */
+    max-width: 600px; /* Limit width for larger screens */
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  img {
+    width: 120px; /* Consistent image size */
+    margin: 0 10px; /* Space around images */
+  }
+  
+  .weather-result ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .weather-result ul li {
+    display: flex; /* Arrange forecast details side-by-side */
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 15px;
+  }
+  
+  .weather-result ul li p {
+    margin: 0; /* Remove default margins from paragraphs */
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* Responsive adjustments for smaller screens */
+    .weather-result {
+      max-width: 100%; /* Full width on small screens */
+    }
+    .weather-result ul li {
+      flex-direction: column; /* Stack forecast details on top */
+      align-items: flex-start; /* Left-align items */
+    }
+  }
+  
