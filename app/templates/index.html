@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form method="POST" action="/weather">
+        <input type="text" name="city" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if weather_data %}
+        <div class="weather-result">
+            <h2>{{ weather_data.city }}</h2>
+            <p>Temperature: {{ weather_data.temperature }} °C</p>
+            <p>Description: {{ weather_data.description }}</p>
+            <img src="{{ weather_data.icon }}" alt="Weather icon">
+        </div>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>

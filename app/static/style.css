@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+form {
+    margin-bottom: 20px;
+}
+.weather-result {
+    margin-top: 20px;
+}
