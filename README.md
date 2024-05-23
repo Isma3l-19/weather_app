@@ -53,10 +53,3 @@ A simple weather application built with Python and Flask that fetches current we
     ```
 
 2. Open your web browser and navigate to `http://127.0.0.1:5000`.
-
-## Testing
-
-Run the unit tests to ensure the application is working correctly:
-
-```sh
-python -m unittest discover -s tests
