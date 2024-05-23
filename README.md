@@ -2,6 +2,8 @@
 
 A simple weather application built with Python and Flask that fetches current weather data and a 5-day forecast using the WeatherAPI.
 
+![Screenshot](app/static/images/nairobi.png)
+
 ## Features
 
 - Get current weather information for any city.
